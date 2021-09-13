@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Сапёр</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body class="body">
     <div class="wrap-game body__wrap-game">
@@ -51,6 +52,7 @@
             </div>
         </header>
         <table class="grid wrap-game__grid"></table>
+        <a id="#open_chat" href="">ССЫЛКА НА ЧАТ</a>
         <div class="modal-window">
             <div class="modal-window__inner">
                 <span class="modal-window__close">&times;</span>
@@ -78,20 +80,27 @@
     <script>
         game = new Game();
     </script>
-    <script type='text/javascript'>
-        (function() {
-            var s = document['createElement']('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.charset = 'utf-8';
-            s.src = '//cleversite.ru/cleversite/widget_new.php?supercode=1&referer_main='+encodeURIComponent(document.referrer)+'&clid=107863zfzHB&siteNew=143215';
-            var ss = document['getElementsByTagName']('script')[0];
-            if(ss) {
-                ss.parentNode.insertBefore(s, ss);
-            } else {
-                document.documentElement.firstChild.appendChild(s);
-            };
-        })();
+    <script>
+        $(document).ready(function() {
+            $('#open_chat').click(function() {
+                $("#cleversite_chat").click();
+            });
+        });
     </script>
+<!--    <script type='text/javascript'>-->
+<!--        (function() {-->
+<!--            var s = document['createElement']('script');-->
+<!--            s.type = 'text/javascript';-->
+<!--            s.async = true;-->
+<!--            s.charset = 'utf-8';-->
+<!--            s.src = '//cleversite.ru/cleversite/widget_new.php?supercode=1&referer_main='+encodeURIComponent(document.referrer)+'&clid=107863zfzHB&siteNew=143215';-->
+<!--            var ss = document['getElementsByTagName']('script')[0];-->
+<!--            if(ss) {-->
+<!--                ss.parentNode.insertBefore(s, ss);-->
+<!--            } else {-->
+<!--                document.documentElement.firstChild.appendChild(s);-->
+<!--            };-->
+<!--        })();-->
+<!--    </script>-->
 </body>
 </html>
